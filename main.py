@@ -16,7 +16,7 @@ from nltk.sentiment import SentimentIntensityAnalyzer
 from newspaper import Article  # Library to extract article text from URLs
 from pinecone import Pinecone, ServerlessSpec
 import pinecone
-from openai import OpenAI
+import openai
 
 # Load environment variables
 load_dotenv()
@@ -148,9 +148,9 @@ if page == "Insight Bot":
 
             # Generate the answer using OpenAI's GPT model
             # Using the OpenAI API with the "gpt-3.5-turbo" model
-            client = OpenAI()
+            # client = OpenAI()
 
-            response = client.completions.create(
+            response = openai.completions.create(
                         model="gpt-3.5-turbo-instruct",
                         prompt=prompt,
                         max_tokens=100,
