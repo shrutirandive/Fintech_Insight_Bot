@@ -17,6 +17,7 @@ from newspaper import Article  # Library to extract article text from URLs
 from pinecone import Pinecone, ServerlessSpec
 import pinecone
 import openai
+import nltk
 #from openai import OpenAI
 
 # Load environment variables
