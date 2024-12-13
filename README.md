@@ -94,6 +94,7 @@ fintech-insight-bot/
 ├── app.py                # Main Streamlit application file
 ├── requirements.txt      # List of required Python packages
 ├── .env                  # Environment variables
+├── config.toml           # Streamlit configuration
 ├── README.md             # Project documentation
 ```
 ## Future Improvements
