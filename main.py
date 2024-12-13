@@ -23,7 +23,7 @@ import openai
 load_dotenv()
 
 
-os.environ['OPENAI_API_KEY'] = os.getenv("OPENAI_API_KEY")
+# os.environ['OPENAI_API_KEY'] = os.getenv("OPENAI_API_KEY")
 # openai_api_key = os.environ["OPENAI_API_KEY"]
 openai_api_key= st.secrets["OPENAI_API_KEY"]
 
@@ -31,7 +31,7 @@ llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0.7, max_tokens=300)
 embeddings = OpenAIEmbeddings(api_key=openai_api_key)
 
 # Pinecone setup
-os.environ['PINECONE_API_KEY'] = os.getenv("PINECONE_API_KEY")
+# os.environ['PINECONE_API_KEY'] = os.getenv("PINECONE_API_KEY")
 # pinecone_api_key = os.environ["PINECONE_API_KEY"]
 pinecone_api_key = st.secrets["PINECONE_API_KEY"]
 
