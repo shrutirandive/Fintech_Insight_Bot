@@ -1,5 +1,4 @@
 import os
-import pickle
 import streamlit as st
 from streamlit_extras.let_it_rain import rain
 import time
@@ -63,7 +62,6 @@ if page == "Insight Bot":
             urls.append(url)
 
     process_url_clicked = st.sidebar.button("Process URLs")
-    file_path = "faiss_store_openai.pkl"
 
     main_placeholder = st.empty()
 
@@ -117,56 +115,56 @@ if page == "Insight Bot":
     # Input query for Q&A
     query = main_placeholder.text_input("First Process URLs. Ask a question about the processed articles:")
     if query:
-        if os.path.exists(file_path):
-            try:
-                print("Query-", query)
-                query_vector = embeddings.embed_query(query)
-                results = index.query(vector=query_vector, top_k=5, include_metadata=True)
+        # if os.path.exists(file_path):
+        try:
+            print("Query-", query)
+            query_vector = embeddings.embed_query(query)
+            results = index.query(vector=query_vector, top_k=5, include_metadata=True)
 
-                # Initialize an empty list to store the content and URL in a new dictionary
-                content_url_list = []
+            # Initialize an empty list to store the content and URL in a new dictionary
+            content_url_list = []
 
-                # Iterate through the results and extract the content and URL
-                for match in results['matches']:
-                    content = match['metadata']['content']
-                    url = match['metadata']['url']
-                    
-                    # Create a new dictionary for each match with content and URL
-                    content_url_dict = {'content': content, 'url': url}
-                    
-                    # Append the dictionary to the list
-                    content_url_list.append(content_url_dict)
+            # Iterate through the results and extract the content and URL
+            for match in results['matches']:
+                content = match['metadata']['content']
+                url = match['metadata']['url']
+                
+                # Create a new dictionary for each match with content and URL
+                content_url_dict = {'content': content, 'url': url}
+                
+                # Append the dictionary to the list
+                content_url_list.append(content_url_dict)
 
-                # Now content_url_list contains all the dictionaries with content and URL
-                print(content_url_list)
-                # Generate the prompt for answering the question
-                prompt = """Answer the following question based on the provided articles:\n + 
-                        Answer the question based on the content, dont make things up from the internet 
-                        ## Dont add your own predictions 
-                        ### Please give complete senetences."""
-                for entry in content_url_list:
-                    prompt += f"Content: {entry['content']}\nURL: {entry['url']}\n"
-                prompt += f"\nQuestion: {query}\nAnswer:"
+            # Now content_url_list contains all the dictionaries with content and URL
+            print(content_url_list)
+            # Generate the prompt for answering the question
+            prompt = """Answer the following question based on the provided articles:\n + 
+                    Answer the question based on the content, dont make things up from the internet 
+                    ## Dont add your own predictions 
+                    ### Please give complete senetences."""
+            for entry in content_url_list:
+                prompt += f"Content: {entry['content']}\nURL: {entry['url']}\n"
+            prompt += f"\nQuestion: {query}\nAnswer:"
 
-                # Generate the answer using OpenAI's GPT model
-                # Using the OpenAI API with the "gpt-3.5-turbo" model
-                client = OpenAI()
+            # Generate the answer using OpenAI's GPT model
+            # Using the OpenAI API with the "gpt-3.5-turbo" model
+            client = OpenAI()
 
-                response = client.completions.create(
-                            model="gpt-3.5-turbo-instruct",
-                            prompt=prompt,
-                            max_tokens=100,
-                            temperature=0.7
-                            )
-                # Get the generated answer
-                answer = response.choices[0].text.strip()
-                # Display answer
-                st.header("Answer")
-                st.write(answer)
-            except Exception as e:
-                st.error(f"An error occurred during the retrieval process: {e}")
-        else:
-            st.error("No data has been processed yet. Please process the URLs first.")
+            response = client.completions.create(
+                        model="gpt-3.5-turbo-instruct",
+                        prompt=prompt,
+                        max_tokens=100,
+                        temperature=0.7
+                        )
+            # Get the generated answer
+            answer = response.choices[0].text.strip()
+            # Display answer
+            st.header("Answer")
+            st.write(answer)
+        except Exception as e:
+            st.error(f"An error occurred during the retrieval process: {e}")
+    else:
+        st.error("No data has been processed yet. Please process the URLs first.")
 
 elif page == "Real-time Stock Prices":
     st.header("Real-time Stock Prices")
