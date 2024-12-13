@@ -16,7 +16,7 @@ from nltk.sentiment import SentimentIntensityAnalyzer
 from newspaper import Article  # Library to extract article text from URLs
 from pinecone import Pinecone, ServerlessSpec
 import pinecone
-# from openai import OpenAI
+from openai import OpenAI
 
 # Load environment variables
 load_dotenv()
