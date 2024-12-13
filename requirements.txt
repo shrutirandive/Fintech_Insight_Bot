@@ -6,7 +6,7 @@ libmagic==1.0
 python-magic==0.4.27
 libmagic==1.0
 streamlit-extras==0.1.5
-yfinance==0.2.31
+yfinance==0.2.50
 matplotlib==3.7.1
 feedparser==6.0.10
 nltk==3.8.1
