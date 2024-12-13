@@ -16,3 +16,4 @@ pinecone-client==2.2.1
 openai
 lxml==4.9.3
 pinecone
+tiktoken
