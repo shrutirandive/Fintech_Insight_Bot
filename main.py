@@ -149,9 +149,9 @@ if page == "Insight Bot":
 
             # Generate the answer using OpenAI's GPT model
             # Using the OpenAI API with the "gpt-3.5-turbo" model
-            client = openai()
+            # client = openai()
 
-            response = client.completions.create(
+            response = openai.completions.create(
                         model="gpt-3.5-turbo-instruct",
                         prompt=prompt,
                         max_tokens=100,
