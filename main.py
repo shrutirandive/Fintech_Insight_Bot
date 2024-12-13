@@ -2,7 +2,7 @@ import os
 import streamlit as st
 from streamlit_extras.let_it_rain import rain
 import time
-from langchain import OpenAI
+#from langchain import OpenAI
 from langchain.chat_models import ChatOpenAI
 from langchain.chains import RetrievalQAWithSourcesChain
 from langchain.text_splitter import RecursiveCharacterTextSplitter
@@ -16,7 +16,7 @@ from nltk.sentiment import SentimentIntensityAnalyzer
 from newspaper import Article  # Library to extract article text from URLs
 from pinecone import Pinecone, ServerlessSpec
 import pinecone
-import openai
+from openai import OpenAI
 
 # Load environment variables
 load_dotenv()
@@ -148,9 +148,9 @@ if page == "Insight Bot":
 
             # Generate the answer using OpenAI's GPT model
             # Using the OpenAI API with the "gpt-3.5-turbo" model
-            # client = OpenAI()
+            client = OpenAI()
 
-            response = openai.completions.create(
+            response = client.completions.create(
                         model="gpt-3.5-turbo-instruct",
                         prompt=prompt,
                         max_tokens=100,
