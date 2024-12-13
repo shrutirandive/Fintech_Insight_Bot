@@ -14,4 +14,4 @@ nltk==3.8.1
 newspaper3k==0.2.8
 pinecone-client==2.2.1
 openai
-
+lxml
