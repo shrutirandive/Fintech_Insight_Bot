@@ -16,3 +16,4 @@ openai==0.28.1
 lxml==4.9.3
 pinecone
 tiktoken
+nltk
