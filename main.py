@@ -151,14 +151,22 @@ if page == "Insight Bot":
             # Using the OpenAI API with the "gpt-3.5-turbo" model
             # client = openai()
 
+            # response = openai.ChatCompletion.create(
+            #             model="gpt-3.5-turbo",
+            #             prompt=prompt,
+            #             max_tokens=100,
+            #             temperature=0.7
+            #             )
+            # # Get the generated answer
+            # answer = response.choices[0].text.strip()
+
             response = openai.ChatCompletion.create(
-                        model="gpt-3.5-turbo",
-                        prompt=prompt,
-                        max_tokens=100,
-                        temperature=0.7
-                        )
-            # Get the generated answer
-            answer = response.choices[0].text.strip()
+                model="gpt-3.5-turbo",
+                messages=[{"role": "user", "content": prompt}],
+                max_tokens=100,
+                temperature=0.7
+            )
+            answer = response.choices[0].message["content"].strip()
             # Display answer
             st.header("Answer")
             st.write(answer)
