@@ -151,8 +151,8 @@ if page == "Insight Bot":
             # Using the OpenAI API with the "gpt-3.5-turbo" model
             # client = openai()
 
-            response = openai.Chat.Completions.create(
-                        model="gpt-3.5-turbo-instruct",
+            response = openai.Chat.Completion.create(
+                        model="gpt-3.5-turbo",
                         prompt=prompt,
                         max_tokens=100,
                         temperature=0.7
