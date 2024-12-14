@@ -106,6 +106,24 @@ fintech-insight-bot/
 3. Enhance the user interface for better usability.
 4. Integrate sentiment analysis for financial news.
 
+## Streamlit Application
+
+### Insight Bot
+
+![image](https://github.com/user-attachments/assets/a8c6dcd7-583d-4d8c-ada4-2449d3049bea)
+![image](https://github.com/user-attachments/assets/662077b2-1374-45d4-9123-cff409f4968c)
+
+### Real-time Stock Prices
+
+![image](https://github.com/user-attachments/assets/86c5b532-1878-4617-881a-7b44cd7682ed)
+
+### News Article Summarizer
+
+![image](https://github.com/user-attachments/assets/fec5ed3f-8520-41eb-b245-9f66405e4238)
+
+
+
+
 ## License
 
 This project is licensed under the MIT License.
