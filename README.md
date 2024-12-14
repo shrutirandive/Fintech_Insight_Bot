@@ -5,6 +5,7 @@ Welcome to the Fintech Insight Bot! This application leverages the power of Gene
 With the integration of Pinecone Vector Database, we ensure efficient and accurate information retrieval, helping you make well-informed financial decisions.
 
 Streamlit application - https://fintechinsightbot-nqgympkfgikwlzqfuft3a6.streamlit.app/
+
 YouTube Link - https://www.youtube.com/watch?v=oDMjIS3Bya8
 
 ## Features
