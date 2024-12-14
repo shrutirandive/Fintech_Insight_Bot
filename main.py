@@ -175,7 +175,7 @@ if page == "Insight Bot":
         except Exception as e:
             st.error(f"An error occurred during the retrieval process: {e}")
     else:
-        st.error("No data has been processed yet. Please process the URLs first.")
+        print("No data has been processed yet. Please process the URLs first.")
 
 elif page == "Real-time Stock Prices":
     st.header("Real-time Stock Prices")
