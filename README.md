@@ -1,22 +1,24 @@
 # Fintech_Insight_Bot📊
 
-Fintech Insight Bot is a comprehensive application that combines the power of Natural Language Processing (NLP) and financial data analysis to provide real-time insights and summarizations. The bot utilizes the OpenAI GPT models, Pinecone for vector storage, and Streamlit for a user-friendly interface, offering functionalities such as article summarization, stock price analysis, and an intelligent Q&A system based on financial articles.
+Welcome to the Fintech Insight Bot! This application leverages the power of Generative AI and cutting-edge NLP techniques to provide real-time financial insights. By using a Retrieval-Augmented Generation (RAG) approach, we’ve designed a bot that not only retrieves relevant data but also generates insightful, timely responses. Whether you’re looking for financial article summaries, stock market information, or intelligent Q&A about financial news, this bot has you covered.
+
+With the integration of Pinecone Vector Database, we ensure efficient and accurate information retrieval, helping you make well-informed financial decisions.
 
 ## Features
 
 1. Insight Bot:
-  - Processes and indexes financial articles using Pinecone.
-  - Enables users to ask questions about processed articles.
-  - Retrieves relevant information using embeddings and GPT models.
+  - Processing and Indexing: We use Pinecone to process and index financial articles for fast, context-aware retrieval.
+  - Smart Q&A System: Ask questions about the articles you process, and our bot will generate responses with relevant insights, thanks to OpenAI’s GPT models and embeddings.
+  - Real-Time Financial Insights: Stay updated with real-time stock market data to enhance your financial decision-making process.
 
 2. Real-Time Stock Prices:
   - Fetches stock prices using ```yfinance```.
-  - Displays market information such as Market Cap, P/E ratio, and sector.
-  - Provides related news for selected stocks.
+  - View important market metrics like Market Cap, P/E ratio, and Sector for each stock.
+  - Get related news articles to stay informed about the selected stock.
 
 3. News Article Summarizer:
-  - Extracts and summarizes news articles from provided URLs.
-  - Displays article keywords and summary using NLP techniques.
+  - Simply provide a URL, and the bot will scrape and summarize the article for you using a web-based loader.
+- It generates article keywords and a concise summary, making it easier to understand key points at a glance.
 
 ## Tech Stack
 
