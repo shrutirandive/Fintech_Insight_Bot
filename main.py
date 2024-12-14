@@ -18,6 +18,7 @@ from pinecone import Pinecone, ServerlessSpec
 import pinecone
 import openai
 import nltk
+nltk.download('punkt')
 #from openai import OpenAI
 
 # Load environment variables
