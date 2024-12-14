@@ -6,17 +6,17 @@ With the integration of Pinecone Vector Database, we ensure efficient and accura
 
 ## Features
 
-1. Insight Bot:
+1. **Insight Bot:**
   - Processing and Indexing: We use Pinecone to process and index financial articles for fast, context-aware retrieval.
   - Smart Q&A System: Ask questions about the articles you process, and our bot will generate responses with relevant insights, thanks to OpenAI’s GPT models and embeddings.
   - Real-Time Financial Insights: Stay updated with real-time stock market data to enhance your financial decision-making process.
 
-2. Real-Time Stock Prices:
+2. **Real-Time Stock Prices:**
   - Fetches stock prices using ```yfinance```.
   - View important market metrics like Market Cap, P/E ratio, and Sector for each stock.
   - Get related news articles to stay informed about the selected stock.
 
-3. News Article Summarizer:
+3. **News Article Summarizer:**
   - Simply provide a URL, and the bot will scrape and summarize the article for you using a web-based loader.
 - It generates article keywords and a concise summary, making it easier to understand key points at a glance.
 
