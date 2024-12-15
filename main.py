@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 import feedparser #used for stock market news 
 from nltk.sentiment import SentimentIntensityAnalyzer
 from newspaper import Article  # Library to extract article text from URLs
-from pinecone import Pinecone, ServerlessSpec
+#from pinecone import Pinecone, ServerlessSpec
 import pinecone
 import openai
 import nltk
