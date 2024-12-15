@@ -14,8 +14,8 @@ import matplotlib.pyplot as plt
 import feedparser #used for stock market news 
 from nltk.sentiment import SentimentIntensityAnalyzer
 from newspaper import Article  # Library to extract article text from URLs
-#from pinecone import Pinecone, ServerlessSpec
-import pinecone
+from pinecone import Pinecone, ServerlessSpec
+#import pinecone
 import openai
 import nltk
 nltk.download('punkt')
@@ -38,7 +38,7 @@ embeddings = OpenAIEmbeddings(api_key=openai_api_key)
 pinecone_api_key = st.secrets["PINECONE_API_KEY"]
 
 index_name  = 'langchainvector1'
-pc = pinecone(api_key = pinecone_api_key)
+pc = Pinecone(api_key = pinecone_api_key)
 index = pc.Index(index_name)
 print("index-",index)
 
