@@ -38,7 +38,7 @@ embeddings = OpenAIEmbeddings(api_key=openai_api_key)
 pinecone_api_key = st.secrets["PINECONE_API_KEY"]
 
 index_name  = 'langchainvector1'
-pc = Pinecone(api_key = pinecone_api_key)
+pc = pinecone(api_key = pinecone_api_key)
 index = pc.Index(index_name)
 print("index-",index)
 
