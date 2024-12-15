@@ -11,9 +11,9 @@ matplotlib==3.7.1
 feedparser==6.0.10
 nltk==3.8.1
 newspaper3k==0.2.8
-pinecone-client==2.2.1
+pinecone-client==5.0.1
 openai==0.28.1
 lxml==4.9.3
-pinecone
+pinecone==5.4.2
 tiktoken
 nltk
