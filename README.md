@@ -136,11 +136,3 @@ This project is licensed under the MIT License.
 - [Pinecone](https://www.pinecone.io/) for vector storage
 - [Streamlit](https://streamlit.io/) for building the app
 
-## Contributing
-
-Contributions are welcome! Feel free to open issues or submit pull requests.
-
-## Contact
-
-For any inquiries, reach out at [Email](sameernimse99@gmail.com) or connect via [LinkedIn](https://www.linkedin.com/in/sameer522/).
-
